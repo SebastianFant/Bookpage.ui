@@ -7,7 +7,7 @@ import { Quote } from './quote.interface';
   providedIn: 'root'
 })
 export class QuoteService {
-  private baseUrl = 'https://localhost:7110/api';
+  private baseUrl = 'https://bookpage20240124143243.azurewebsites.net/api';
   constructor(private http:HttpClient) { }
   addQuote(addQuoteRequest: Quote):Observable<Quote> {
     return this.http.post<Quote>(this.baseUrl+ '/quotes', addQuoteRequest);
