@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Books</h2>
+    </div>
+    <div class="col">
+      <a  class="btn btn-primary" *ngIf="isUserAuthenticated()"aria-current="page" routerLink="add"><i class="fa-solid fa-plus"></i> Add a book</a>
+    </div>
+  <table class="table table-striped">
+    <thead  class="thead-light">
+      <tr>
+        
+        <th scope="col">Title</th>
+        <th scope="col">Author</th>
+        <th scope="col">Year</th>
+        <th scope="col">Genre</th>
+        <th *ngIf="isUserAuthenticated()"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books">
+        
+        <td scope="row">{{ book.title }}</td>
+        <td scope="row">{{ book.author }}</td>
+        <td scope="row">{{ book.year }}</td>
+        <td scope="row">{{ book.genre }}</td>
+        <td scope="row" *ngIf="isUserAuthenticated()"><a [routerLink]="['/books','edit', book.id]">Edit / Delete</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

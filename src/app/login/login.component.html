@@ -1,0 +1,14 @@
+<div class="container"><form #form="ngForm" ngNativeValidate (ngSubmit)="login()">
+  <div class="row">
+    <div class="col">
+      <label for="name" class="form-label">Username</label>
+      <input type="text" class="form-control" id="name" name ="name" [(ngModel)] = "loginRequest.name" required="">
+    </div>
+    <div class="col">
+      <label for="password" class="form-label">Password</label>
+      <input type="password" class="form-control" id="password" name="password" [(ngModel)] = "loginRequest.password" required="">
+    </div>
+    
+  </div>
+  <button type="submit" class="btn btn-primary mt-3">Submit</button>
+  </form></div>

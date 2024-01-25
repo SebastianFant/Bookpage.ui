@@ -1,0 +1,28 @@
+<div class="container my-5">
+  <h1 class="mb-3">Add a book</h1>
+  <div class="row">
+    <div class="col-6">
+      <form #form="ngForm" ngNativeValidate (ngSubmit)="addBook()">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" class="form-control" id="title" name="title"[(ngModel)] ="addBookRequest.title" required>
+        </div>
+        <div class="mb-3">
+          <label for="author" class="form-label">Author</label>
+          <input type="text" class="form-control" id="author" name="author"[(ngModel)] ="addBookRequest.author" required>
+        </div>
+        <div class="mb-3">
+          <label for="year" class="form-label">Year published</label>
+          <input type="number" class="form-control" id="year" name="year"[(ngModel)] ="addBookRequest.year" required>
+        </div>
+        <div class="mb-3">
+          <label for="genre" class="form-label">Genre</label>
+          <input type="text" class="form-control" id="genre" name="genre"[(ngModel)] ="addBookRequest.genre" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+
+    </div>
+  </div>
+  
+</div>

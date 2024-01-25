@@ -1,0 +1,22 @@
+<div class="container my-5">
+    <h1 class="mb-3">Add a Quote</h1>
+    <div class="row">
+      <div class="col-6">
+        <form #form="ngForm" (ngSubmit)="addQuote()">
+          <div class="mb-3">
+            <label for="quote" class="form-label">Quote</label>
+            <input type="text" class="form-control" id="title" name="quote"[(ngModel)] ="addQuoteRequest.text">
+          </div>
+          <div class="mb-3">
+            <label for="author" class="form-label">Author</label>
+            <input type="text" class="form-control" id="author" name="author"[(ngModel)] ="addQuoteRequest.author">
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+  
+      </div>
+    </div>
+    
+  </div>
+  

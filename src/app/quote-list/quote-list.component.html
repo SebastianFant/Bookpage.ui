@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h2>Your favorite quotes</h2>
+    </div>
+    <div class="col">
+      <a  class="btn btn-primary" aria-current="page" routerLink="add"><i class="fa-solid fa-plus"></i> Add a quote</a>
+    </div>
+    
+    
+  </div>
+    <table  class="table table-striped">
+      <thead>
+        <tr>
+          
+          <th scope="col">Quote</th>
+          <th scope="col">Author</th>
+          <th scope="col"></th>
+          
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let quote of quotes">
+          
+          <td scope="row">{{ quote.text }}</td>
+          <td scope="row">{{ quote.author }}</td>
+          <td scope="row"><a [routerLink]="['/quotes','edit', quote.id]">Edit / Delete</a></td>
+          
+        </tr>
+      </tbody>
+    </table>
+  </div>
